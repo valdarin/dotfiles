@@ -23,3 +23,22 @@ export GREP_OPTIONS="--color=auto"
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# virtualenv
+if [ -e "/usr/local/bin/virtualenvwrapper.sh" ]; then
+    # Always use pip/distribute
+    export VIRTUALENV_USE_DISTRIBUTE=1
+
+    # All virtualenvs will be stored here
+    export WORKON_HOME=$HOME/.virtualenvs
+
+    source /usr/local/bin/virtualenvwrapper.sh
+    export PIP_VIRTUALENV_BASE=$WORKON_HOME
+    export PIP_RESPECT_VIRTUALENV=true
+fi
+
+# gradle
+export GRADLE_HOME=~/src/build_tools/gradle
+export GRADLE_COMMON=~/src/build_tools/gradle_common
+export GRADLE_OPTS=-Dorg.gradle.daemon=true
+export PATH=$PATH:$GRADLE_HOME/bin
