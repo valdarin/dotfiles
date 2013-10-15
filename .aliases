@@ -28,7 +28,7 @@ alias ll="ls -laF ${colorflag}"
 alias ld='ls -lF ${colorflag} | grep "^d"'
 
 # Grep with color
-alias grep='grep --color=auto'
+alias grep='grep -I --color=auto'
 
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
