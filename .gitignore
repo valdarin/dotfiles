@@ -3,4 +3,7 @@
 
 # Temp Files
 *~
-.DS_STORE
+.DS_Store
+
+# Vagrant
+.vagrant/
