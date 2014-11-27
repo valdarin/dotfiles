@@ -1,49 +1,49 @@
 [core]
     editor = vim
-    excludefile = ~/.gitignore
-	attributesfile = ~/.gitattributes
+    excludesfile = ~/.gitignore
+    attributesfile = ~/.gitattributes
 
-	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
-	trustctime = false
-    
+    # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+    trustctime = false
+
 [color]
     ui = always
-    
+
 [color "diff"]
     meta = yellow bold
     frag = magenta bold
     old = red bold
     new = green bold
     whitespace = red reverse
-    
+
 [color "status"]
     added = green bold
     changed = yellow bold
     untracked = red bold
-    
+
 [color "branch"]
     current = yellow bold
     local = green bold
     remote = cyan bold
-    
+
 [alias]
     s = status
     sb = status -s -b
     d = diff
     co = checkout
     b = branch
-	l = log --pretty=oneline -n 20 --graph --abbrev-commit
-	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-	fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
-	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+    l = log --pretty=oneline -n 20 --graph --abbrev-commit
+    dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+    fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+    fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 
 [push]
     default = simple
 
 [apply]
-	whitespace = fix
+    whitespace = fix
 
 [diff]
-	# Detect copies as well as renames
-	renames = copies
+    # Detect copies as well as renames
+    renames = copies
 
